@@ -1,14 +1,14 @@
 class Number :
-    n1 = 2 
-    n2 = 5 
-    def hoandoi(self):
-        self.n1 = self.n2
-        self.n2 = 10 
-    def hienthi(self):
-        print(f"giá trị của n1 sau hoán đổi : {self.n1}")
-        print(f"giá trị của n2 sau hoán đổi : {self.n2}")
+    i = 0 
+if __name__ == "__main__":
+    n1 = Number()
+    n2 = Number()
+    n1.i = 2 
+    n2.i = 5 
+    n1.i = n2.i 
+    n2.i = 10 
+    print(f"giá trị n1.i : {n1.i}")
+    print(f"giá trị n2.i : {n2.i}")
 
 
-giatri = Number()
-giatri.hoandoi()
-giatri.hienthi()
+
