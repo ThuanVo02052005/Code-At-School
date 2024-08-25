@@ -1,19 +1,19 @@
-Các dự án đang tham gia: Rclips (Dự án chính) và Infobox (hỗ trợ test)
-
-Công nghệ sử dụng: Spring ToolSuite, Github, Jira, MySQLWorkpress, sqldeveloper, Postman, MobaXtern, OpenVPN, WinSCP, Putty, ....
-
-Hệ thống được xây dựng theo mô hình Microservice: Do các nghiệp vụ nền được xây dựng sẵn sau đó build thành file JAR nên chỉ được xem
-và chỉnh sửa 1 package trong hệ thống và chưa được xem code và hiểu rõ toàn bộ mô hình, code framework mà họ xây dựng.
-
-Đối tượng sử dụng: Các ngân hàng và tổ chức tín dụng có quy định về việc cho vay tín dụng theo các hạn mức, yêu cầu.
-
-Hiện trạng hệ thống Rclips: dựa trên framework đã xây dựng. Với các yêu cầu từ ngân hàng gửi sang, sẽ xây dựng nghiệp vụ logic, function, scorecard 
-nhằm tính toán và trả về kết quả mà bên ngân hàng yêu cầu (thường mà các số hoặc mã số xếp loại). Với các ngân hàng sẽ có các loại khoản vay, và với mỗi loại
-sẽ có những yêu cầu, nguyên tắc tính toán riêng để xác định khách hàng thuộc diện nào và vay tối đa bao nhiêu. Với mỗi khách hàng riêng biệt sẽ có rất nhiều điều kiện
-tiêu chuẩn khác nhau và để tính toán ra số tiền tối đa họ có thể vay được sẽ rất mất thời gian cho một khách hàng. Rclips sinh ra để giải quyết vấn đề đó một cách nhanh chóng.
-Ngân hàng hoặc bên thứ ba sẽ truyền dữ liệu vào hệ thống Rclips dưới dạng json, hệ thống nhận dữ liệu và tính toán trả về kết quả mong muốn cho khách hàng ( Thông thường sẽ truyền dưới
-dạng file excel.csv hoặc file.dat hệ thống sẽ chuyển đổi dữ liệu và trả về file .csv). Quá trình xây dựng logic theo yêu cầu sẽ họp trao đổi với BA ngân hàng về logic, các yêu cầu đầu vào ra và logic tính toán scorecard
-và sẽ thống nhất nạp vào với định dạng file nào và trả ra định djang file nào, từ đó config trên Rclips batch.
-
-Đóng góp cho dự án: Xây dựng nghiệp vụ logic từ ngân hàng yêu cầu (xây dựng, kiểm tra và dựng bộ dữ liệu test). Hỗ trợ chuyển đồi truy vấn, code khi chuyển đổi DB từ Oracle sang mySQL. Config DB, bảo trì hạ tầng Rclips, 
-kiểm tra kết nối server và config trên hệ thống Rclips batch, deploy sản phẩm. Black box test cho Infobox B2B và B2C.
+1, Value return ? 
+-Tricky park 1 :
++ the return value of n1.i 5 
+-Tricky park 2 :
++ the return value of n1.i and n2.i are 10 and 20 
+-Aliasing : 
++ the return value of n1.i 15 
+2, What are the difference between each code ?
+-Tricky park 1 : 
++ khởi tạo 2 đối tượng n1 và n2 
++ gán giá trị cho thuộc tính i của n1 và n2 
++ gán thuộc tính i của đối tượng n2 cho thuộc tính i n1 
++ gán giá trị cho thuộc tính i của đối tượng n2 
+-Tricky park 2 : 
++ + khởi tạo 2 đối tượng n1 và n2 
++ gán đối tượng n2 cho đối tượng n1 , khi này cả n1 và n2 đều trỏ đến 1 giá trị .
++ 
+-Aliasing : 
++ 
