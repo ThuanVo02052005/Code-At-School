@@ -1,0 +1,21 @@
+1, Value return ? 
+-Tricky park 1 :
++ the return value of n1.i 5 
+-Tricky park 2 :
++ the return value of n1.i and n2.i are 10 and 20 
+-Aliasing : 
++ the return value of n1.i 15 
+2, What are the difference between each code ?
+-Tricky park 1 : 
++ khởi tạo 2 đối tượng n1 và n2 
++ gán giá trị cho thuộc tính i của n1 và n2 
++ gán thuộc tính i của đối tượng n2 cho thuộc tính i n1 
++ gán giá trị cho thuộc tính i của đối tượng n2 
+-Tricky park 2 : 
++ + khởi tạo 2 đối tượng n1 và n2 
++ gán đối tượng n2 cho đối tượng n1 , khi này cả n1 và n2 đều trỏ đến 1 giá trị .
+-Aliasing : 
++ + tạo 1 class PassOject() , truyền vào 1 đối tượng m , gán giá trị cho thuộc tính i của đối tượng m 
++ tạo 1 đối tượng n , gán giá trị cho thuộc tính i của n 
++ tạo 1 đối tượng kiểu PassOject 
++ gọi phương thức f trên đối tượng obj 
