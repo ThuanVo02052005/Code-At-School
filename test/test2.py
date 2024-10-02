@@ -1,0 +1,27 @@
+from tkinter import * 
+from PIL import ImageTk , Image 
+ai = Tk()
+ai.geometry('800x800')
+ai.title('TÂM SỰ CÙNG BẢN THÂN')
+ai.attributes('-topmost', False)
+img_import = Image.open("D:\ảnh\ảnh_ai.jpg")
+resize = img_import.resize((800,800), Image.LANCZOS)
+img = ImageTk.PhotoImage(resize)
+logo_import= Image.open("D:\ảnh\ảnh_logo.jpg")
+logo = ImageTk.PhotoImage(logo_import)
+ai.iconphoto(False, logo)
+hinh_anh = Button (ai , text = ' ' , font = ('time new roman', 12), image=img)
+hinh_anh.place(x =0, y = 15)
+def cauhoi1():
+    ai1 = Tk()
+    ai1.geometry('500x300')
+    ai1.title('tâm sự cùng bản thân')
+    ai1.attributes('-topmost', True) 
+    a= Label(ai1 , text = 'Chào bạn!bạn tên là gì ?', font = ('time new Roman', 30))
+    a.place(x = 30 , y = 40)
+    b= Entry(ai1,width= 20 , font = ('time new roman ', 30))
+    b.place(x = 30, y = 100) 
+
+c= Button(ai, text = 'bắt đầu' , font = ('time new roman', 25), width = 10, bg = 'blue', fg = 'white', command = cauhoi1 )
+c.place(x = 200, y = 450)
+ai.mainloop()
